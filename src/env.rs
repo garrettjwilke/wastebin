@@ -134,7 +134,7 @@ pub fn addr() -> Result<SocketAddr, Error> {
     std::env::var(VAR_ADDRESS_PORT)
         .as_ref()
         .map(String::as_str)
-        .unwrap_or("0.0.0.0:8088")
+        .unwrap_or("0.0.0.0:8086")
         .parse()
         .map_err(|_| Error::AddressPort)
 }

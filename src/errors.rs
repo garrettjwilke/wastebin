@@ -11,7 +11,7 @@ pub enum Error {
     Delete,
     #[error("compression error: {0}")]
     Compression(String),
-    #[error("entry not found")]
+    #[error("non-existant file")]
     NotFound,
     #[error("sqlite error: {0}")]
     Sqlite(rusqlite::Error),

@@ -90,7 +90,7 @@ const EXPIRATION_OPTIONS: [(&str, Expiration); 8] = [
         "1 year",
         Expiration::Time(NonZero::new(31_536_000).unwrap()),
     ),
-    ("🔥 after reading", Expiration::Burn),
+    ("Delete after viewing", Expiration::Burn),
 ];
 
 impl Index<'_> {

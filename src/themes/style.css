@@ -1,37 +1,63 @@
+/* Define random color variables */
+:root {
+  --color-dark-bg: #3e4b55;
+  --color-dark-text: #e4e3d4;
+  --color-dark-border: #5a7286;
+
+  --color-light-bg: #f2f2f2;
+  --color-light-text: #2c2f35;
+  --color-light-border: #c5c7c8;
+  --color-light-heading: #6f7c87;
+
+  --color-primary: #67b1f6;
+  --color-hover-primary: #ff7f51;
+
+  --color-option-hover-bg: #7accf2;
+  --color-option-hover-text: #263238;
+
+  --color-input-border: #67b1f6;
+  --color-link: #a1b1b9;
+  --color-link-hover: #ff7f51;
+}
+
 @import url("light.css") (prefers-color-scheme: light);
-@import url("dark.css") (prefers-color-scheme: dark);
+@import url("light.css") (prefers-color-scheme: dark);
 
 @media (prefers-color-scheme: dark) {
   body, textarea, select, input, select > option:hover {
-    background-color: #0f1419;
-    color: #e6e1cf;
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
   }
 
   select {
-    color: #e6e1cf;
+    color: var(--color-dark-bg);
   }
 
   header {
-    border-bottom: 1px solid #163855;
+    border-bottom: 1px solid var(--color-light-border);
+  }
+
+  h1 {
+    color: var(--color-light-heading);
   }
 }
 
 @media (prefers-color-scheme: light) {
   body, textarea, select, input, select > option:hover {
-    background-color: #fafafa;
-    color: #333;
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
   }
 
   select {
-    color: #0f1419;
+    color: var(--color-dark-bg);
   }
 
   header {
-    border-bottom: 1px solid #d9d7d7;
+    border-bottom: 1px solid var(--color-light-border);
   }
 
   h1 {
-    color: #555;
+    color: var(--color-light-heading);
   }
 }
 
@@ -108,15 +134,15 @@ header .nav-title {
 
 header .nav-button {
   display: flex;
-  color: #39bae6;
+  color: var(--color-primary);
   border: none;
   padding: 1rem;
   background: none;
 }
 
 header .nav-button:hover {
-  background-color: #39bae6;
-  color: #0f1419;
+  background-color: var(--color-primary);
+  color: var(--color-dark-bg);
   cursor: pointer;
   border-radius: 8px;
 }
@@ -139,11 +165,11 @@ button:hover {
   padding: 1em;
   border: none;
   border-radius: 8px;
-  background-color: #39bae6;
+  background-color: var(--color-primary);
 }
 
 .button:hover {
-  background-color: #fa6e32;
+  background-color: var(--color-hover-primary);
   transition: background-color 100ms;
 }
 
@@ -155,8 +181,8 @@ select {
 }
 
 select > option:hover {
-  background-color: #39bae6;
-  color: #0f1419;
+  background-color: var(--color-option-hover-bg);
+  color: var(--color-option-hover-text);
 }
 
 option {
@@ -167,7 +193,7 @@ input {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.0625rem;
   padding: 0.25rem;
-  border-color: #39bae6;
+  border-color: var(--color-input-border);
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
@@ -265,11 +291,11 @@ td.line-number {
 }
 
 .line-number > a, .line-number > a:visited {
-  color: #abb0b6;
+  color: var(--color-link);
 }
 
 .line-number > a:hover, .line-number > a:focus {
-  color: #fa6e32;
+  color: var(--color-link-hover);
 }
 
 .line {

@@ -2,7 +2,7 @@
 Description=Wastebin
 
 [Service]
-ExecStart=/opt/wastebin/wastebin.sh
+ExecStart=/home/homeless/wastebin/wastebin.sh
 
 [Install]
 WantedBy=multi-user.target

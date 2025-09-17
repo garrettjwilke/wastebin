@@ -1,0 +1,8 @@
+[Unit]
+Description=Wastebin
+
+[Service]
+ExecStart=/opt/wastebin/wastebin.sh
+
+[Install]
+WantedBy=multi-user.target
